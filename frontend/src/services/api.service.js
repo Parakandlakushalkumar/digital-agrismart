@@ -4,7 +4,7 @@ import { API_CONFIG, API_ERRORS } from '../config/api.config';
 // Create axios instance with absolute URL to backend
 // This ensures all API calls go to http://localhost:9653/api
 const api = axios.create({
-  baseURL: 'http://localhost:9653/api', // Absolute URL - ensures correct port
+  baseURL: import.meta.env.VITE_API_URL, // Absolute URL - ensures correct port
   timeout: API_CONFIG.TIMEOUT,
   headers: {
     'Content-Type': 'application/json',
