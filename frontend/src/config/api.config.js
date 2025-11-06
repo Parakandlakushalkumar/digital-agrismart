@@ -1,7 +1,7 @@
 // API Configuration
 // IMPORTANT: This MUST point to your backend server URL
 export const API_CONFIG = {
-  BASE_URL: 'http://localhost:9653/api', // Absolute URL to backend - DO NOT CHANGE
+  BASE_URL: import.meta.env.VITE_API_URL, // Absolute URL to backend - DO NOT CHANGE
   TIMEOUT: parseInt(import.meta.env.VITE_API_TIMEOUT) || 30000,
   HEADERS: {
     'Content-Type': 'application/json',
